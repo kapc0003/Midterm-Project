@@ -1,0 +1,115 @@
+@import "variables";
+
+* {
+  font-family: serif;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1.5;
+  color: $color-black;
+}
+
+header {
+  width: 100%;
+  background-color: $color-primary;
+  height: 70px;
+  border: 1px solid $color-primaryDark;
+  margin-top: 20px;
+
+  h1 {
+    color: $color-white;
+    text-align: left;
+    font-size: 50px;
+    margin-left: 10px;
+  }
+}
+
+main {
+  background-color: $color-white;
+
+  .wrap {
+    padding: $padding;
+    height: 80vh;
+
+    .container {
+      height: calc(80vh - #{$padding} * 2);
+      overflow: scroll;
+      float: left;
+
+      &.list {
+        width: calc(30vw - #{$padding});
+
+        li {
+          list-style: none;
+          padding: $padding 0;
+          border-bottom: 1px solid $color-lightGray;
+
+          &:hover {
+            a {
+              background-color: $color-primary;
+
+              p, span {
+                color: $color-primaryAccent;
+              }
+            }
+          }
+
+          a {
+            text-decoration: none;
+
+            figure {
+
+              img {
+                float: left;
+                padding-right: 10px;
+              }
+
+              span {
+                font-style: italic;
+                font-size: 0.9rem;
+              }
+            }
+          }
+        }
+      }
+
+      &.details {
+        width: calc(70vw - #{$padding});
+        margin-top: 10px;
+
+        h1 {
+          width: 100%;
+          color: $color-black;
+          margin-left: 35px;
+        }
+
+        div.DOB {
+          margin-left: 35px;
+          width: 50%;
+          margin-top: 10px;
+        }
+
+        div.Location {
+          margin-top: 10px;
+          margin-left: 35px;
+          width: 50%;
+          font-style: italic;
+          border-top: 1px solid $color-primaryAccent;
+          border-bottom: 1px solid $color-primaryAccent;
+        }
+
+        div.Info {
+          margin-left: 35px;
+          width: 50%;
+          margin-top: 10px;
+        }
+
+        img {
+          height: 150px;
+          width: 150px;
+          margin: 10px 35px 35px 35px;
+          border: solid 2px $color-primaryDark;
+        }
+      }
+    }
+  }
+}
